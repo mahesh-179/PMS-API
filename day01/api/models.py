@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+def generateimage(instance,file):
+    return f"images/{instance.id}/{file}"
 class Student(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE, related_name="profile")
     first_name = models.CharField(max_length=15)
@@ -11,6 +13,7 @@ class Student(models.Model):
         ('M','Master')
     ]
     grade = models.CharField(choices=grade_choice,max_length=1)
+    profile_image = models.ImageField(upload_to=generateimage)
 
 
     def __str__(self):

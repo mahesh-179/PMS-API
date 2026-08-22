@@ -6,4 +6,7 @@ from .models import Student
 @receiver(post_save,sender=User)
 def create_profile(sender,instance,created,**kwargs):
     if created:
-        Student.objects.create(user=instance)
+        Student.objects.create(user=instance,
+        first_name=instance.first_name,
+        last_name=instance.last_name
+        )

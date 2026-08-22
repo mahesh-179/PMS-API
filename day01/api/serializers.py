@@ -5,7 +5,7 @@ from rest_framework import serializers
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = '__all__'
+        fields = ['user','url','first_name','middle_name','last_name','address','grade','profile_image']
 
 class UserSerializer(serializers.ModelSerializer):
     profile = StudentSerializer(read_only=True)

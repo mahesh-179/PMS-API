@@ -1,14 +1,14 @@
-from .models import Student
+from .models import Profile
 from django.contrib.auth.models import User
 from rest_framework import serializers
 
-class StudentSerializer(serializers.ModelSerializer):
+class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Student
-        fields = ['url','first_name','middle_name','last_name','address','grade','profile_image']
+        model = Profile
+        fields = ['url','first_name','middle_name','last_name','address','role','profile_image']
 
 class UserSerializer(serializers.ModelSerializer):
-    profile = StudentSerializer(read_only=True)
+    profile = ProfileSerializer(read_only=True)
     class Meta:
         model = User
         fields = ['username','first_name','last_name','email','password','profile']

@@ -1,10 +1,10 @@
 from rest_framework.viewsets import ModelViewSet
-from .serializers import UserSerializer,StudentSerializer
-from .models import Student
+from .serializers import ProfileSerializer, UserSerializer
+from .models import Profile
 from django.contrib.auth.models import User
-class StudentAPI(ModelViewSet):
-    queryset = Student.objects.all()
-    serializer_class = StudentSerializer
+class ProfileAPI(ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
 
 class UserAPI(ModelViewSet):
     queryset = User.objects.all()

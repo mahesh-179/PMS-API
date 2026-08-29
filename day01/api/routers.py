@@ -1,6 +1,6 @@
 from rest_framework.routers import DefaultRouter
-from .viewsets import StudentAPI,UserAPI
+from .viewsets import ProfileAPI,UserAPI
 router = DefaultRouter()
-router.register('students',StudentAPI)
+router.register('profiles',ProfileAPI)
 router.register('user',UserAPI)
 

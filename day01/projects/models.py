@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 def Generate_path(instance,file):
-    return f"images/projects/{instance.id}/{file}"
+    return f"images/projects/{instance.created_user.username}/{file}"
 class Project(models.Model):
     class StatusOption(models.TextChoices):
         PENDING = 'PN','Pending'
@@ -22,3 +22,5 @@ class Project(models.Model):
     updated_at = models.DateField(auto_now=True,editable=False)
     task_image = models.ImageField(upload_to=Generate_path)
 
+    def __str__(self):
+        return f"{self.title}-{self.created_user.username}"

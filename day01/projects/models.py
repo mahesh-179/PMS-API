@@ -20,7 +20,7 @@ class Project(models.Model):
     priority = models.CharField(max_length=1,choices=PriorityOption.choices,default=PriorityOption.HIGH)
     created_at = models.DateField(auto_now_add=True,editable=False)
     updated_at = models.DateField(auto_now=True,editable=False)
-    task_image = models.ImageField(upload_to=Generate_path)
+    project_image = models.ImageField(upload_to=Generate_path)
 
     def __str__(self):
         return f"{self.title}-{self.created_user.username}"

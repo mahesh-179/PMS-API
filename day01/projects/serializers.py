@@ -6,4 +6,4 @@ class ProjectSerializer(serializers.ModelSerializer):
     assigned_to = serializers.HyperlinkedRelatedField(view_name='user-detail', many=True, read_only=True)
     class Meta:
         model = Project
-        fields = ['id','url','title','description','created_user','assigned_to','status','priority','created_at','updated_at','task_image']
+        fields = ['id','url','title','description','created_user','assigned_to','status','priority','created_at','updated_at','project_image']

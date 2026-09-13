@@ -1,68 +1,31 @@
-# RestfulAPI-Training
-# RESTful API Training 🚀
+# Project Management System API
 
-Welcome to my **RESTful API Training** repository!
+A RESTful Project Management System API built with **Django and Django REST Framework (DRF)**. The API allows users to manage projects, tasks, team members, and project-related activities through secure and structured endpoints.
 
-This repository contains my learning journey while studying **RESTful APIs and Django REST Framework (DRF)** through YouTube tutorials and hands-on practice.
+### 🚀 Features
 
-## 📚 What I'm Learning
-
-* REST API fundamentals
-* HTTP methods: GET, POST, PUT, PATCH, DELETE
-* Django REST Framework
-* Serializers & ModelSerializers
-* API Views
-* Generic API Views & Mixins
-* ViewSets
-* Routers
-* CRUD operations
-* Request & Response handling
-* Authentication & Permissions
+* User registration and authentication
+* JWT-based authentication
+* Project creation and management
+* Task creation, updating, and deletion
+* Assign tasks to team members
+* Task status and priority management
+* User-specific project and task access
+* Search and filtering
 * Pagination
-* Filtering & Searching
-* API testing with Postman
-* Building real-world REST APIs
+* RESTful API architecture
+* Permission and authentication handling
 
-## 🛠️ Technologies
+### 🛠️ Tech Stack
 
 * Python
 * Django
 * Django REST Framework
-* SQLite
-* Postman
+* PostgreSQL / SQLite
+* JWT Authentication
 * Git & GitHub
 
-## 🎯 Goal
+### 🎯 Purpose
 
-The main goal of this repository is to **learn REST API development through consistent practice** and gradually move from basic concepts to building complete, real-world APIs.
-
-## 📂 Repository Structure
-
-```text
-RESTful-API-Training/
-│
-├── projects/
-├── practice/
-├── notes/
-├── requirements.txt
-└── README.md
-```
-
-> **Note:** This is a learning/practice repository. The code will evolve as I learn new concepts and improve my understanding of REST API development.
-
-## 📈 Learning Progress
-
-* [x] REST API Basics
-* [x] HTTP Methods
-* [x] Serializers
-* [x] API Views
-* [ ] Generic API Views & Mixins
-* [ ] ViewSets & Routers
-* [ ] Authentication
-* [ ] Permissions
-* [ ] Filtering & Pagination
-* [ ] Real-world API Projects
-
-## 👨‍💻 About
-
-I'm documenting my **REST API learning journey** here to track my progress, practice concepts, and build a strong foundation for backend development with Django REST Framework.
+This project is built to strengthen practical knowledge of **Django REST Framework, API development, authentication, permissions, database relationships, and backend architecture** while creating a real-world project management solution.
+RESTful Project Management System API built with Django REST Framework featuring JWT authentication, projects, tasks, team management, permissions, filtering, and pagination.

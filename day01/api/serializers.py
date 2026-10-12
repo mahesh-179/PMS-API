@@ -9,6 +9,23 @@ class ProfileSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     profile = ProfileSerializer(read_only=True)
+    password = serializers.CharField(write_only=True)
+
+    def create(self, validated_data):
+        password = validated_data.pop('password')
+        user = User.objects.create(**validated_data)
+        user.set_password(password)
+        user.save()
+        return user
+
+    def update(self, instance, validated_data):
+        user = instance 
+        if 'password' in validated_data:
+            password = validated_data.pop('password')
+            user.set_password(password)
+            user.save()
+            return user
+        
     class Meta:
         model = User
         fields = ['username','first_name','last_name','email','password','profile']

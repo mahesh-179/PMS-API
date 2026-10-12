@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'api',
     'projects',
     'tasks',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +63,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'day01.wsgi.application'
 
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication'
+    ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],

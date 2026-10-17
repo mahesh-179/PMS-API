@@ -38,7 +38,6 @@ auth_urlpatterns = [
 ]
     
 api_urlpatterns = [
-    path('', home, name='home'),
     path('auth/token/', TokenObtainPairView.as_view()),
     path('auth/token/refresh/', TokenRefreshView.as_view()),
     path('users/', include(user_router.urls)),
@@ -46,6 +45,7 @@ api_urlpatterns = [
     path('tasks/', include(task_router.urls)),
 ]
 urlpatterns = [
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('api/', include(api_urlpatterns)),
 ]+auth_urlpatterns
